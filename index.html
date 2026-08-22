@@ -170,6 +170,27 @@ section{padding:52px 0;position:relative}
 }
 .aviso b{color:#FFD97A;font-weight:600}
 
+/* ---------- Historial ---------- */
+.escaleta{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:rgba(255,255,255,.022)}
+.esc-row{
+  display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start;
+  padding:17px 18px;border-top:1px solid var(--line);
+}
+.esc-row:first-child{border-top:0}
+.esc-when{
+  font-family:'Sora',sans-serif;font-size:.85rem;font-weight:600;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.esc-when small{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+  -webkit-text-fill-color:var(--faint);margin-top:2px}
+.esc-what b{display:block;font-family:'Sora',sans-serif;font-weight:600;font-size:.97rem;color:#fff;letter-spacing:-.015em}
+.esc-what p{margin-top:5px;font-size:.885rem;color:var(--muted);max-width:64ch}
+
+@media (max-width:560px){
+  .esc-row{grid-template-columns:1fr;gap:6px}
+  .esc-when small{display:inline;margin-left:8px}
+}
+
 /* Lo que viene */
 .siguiente{display:grid;gap:12px}
 .paso{
@@ -341,12 +362,62 @@ footer{padding:34px 0 0;border-top:1px solid var(--line);margin-top:24px;font-si
     <article class="bloque espera">
       <div class="bl-top">
         <span class="bl-cliente">Proyecto 5</span>
-        <span class="estado e-prox">Próximamente</span>
+        <span class="estado e-prox">Pendiente de aprobación</span>
       </div>
       <h3>Bot de cobro</h3>
-      <p class="bl-sub">Todavía no ha arrancado.</p>
+      <p class="bl-sub">A la espera de su visto bueno para comenzar.</p>
     </article>
 
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="sec-num">Historial</span>
+    <h2>De dónde viene cada bot</h2>
+    <p>Cinco meses de trabajo, desde los primeros automatismos hasta los desarrollos de hoy.</p>
+  </div>
+
+  <div class="escaleta">
+    <div class="esc-row">
+      <div class="esc-when">Abril<small>2026</small></div>
+      <div class="esc-what">
+        <b>Los primeros automatismos</b>
+        <p>Arrancan el seguimiento de conversaciones, los avisos al asesor y la consulta de catálogo. A finales de mes nace <b>Lucy en WhatsApp</b>, la misma que hoy sigue atendiendo a sus clientes.</p>
+      </div>
+    </div>
+
+    <div class="esc-row">
+      <div class="esc-when">Mayo<small>2026</small></div>
+      <div class="esc-what">
+        <b>La atención se concentra en WhatsApp</b>
+        <p>Se suman los seguimientos automáticos a 24 y 72 horas y el primer reporte semanal de métricas. El canal anterior queda atrás: WhatsApp pasa a ser la vía principal.</p>
+      </div>
+    </div>
+
+    <div class="esc-row">
+      <div class="esc-when">Junio<small>2026</small></div>
+      <div class="esc-what">
+        <b>Respaldo de los automatismos</b>
+        <p>Se monta la copia de seguridad de todo lo construido, para poder restaurar cualquier pieza sin rehacerla.</p>
+      </div>
+    </div>
+
+    <div class="esc-row">
+      <div class="esc-when">Julio<small>2026</small></div>
+      <div class="esc-what">
+        <b>Lucy aprende a contestar el teléfono</b>
+        <p>Nace el <b>bot de llamada</b>: atiende la llamada completa, avisa cuando el pedido está listo, registra cada conversación, envía la cotización en PDF al colgar y alerta al equipo si algo falla.</p>
+      </div>
+    </div>
+
+    <div class="esc-row">
+      <div class="esc-when">Agosto<small>2026</small></div>
+      <div class="esc-what">
+        <b>El catálogo real y la cotización</b>
+        <p>Se abre el acceso a su <b>ADM Cloud</b> y se construye la conexión del catálogo. Se revisa el catálogo entero contra el ERP, se levanta el <b>asistente de cotización</b> y el bot de llamada suma el reporte diario a gerencia.</p>
+      </div>
+    </div>
   </div>
 </section>
 
